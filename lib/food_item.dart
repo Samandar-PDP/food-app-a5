@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_app/food.dart';
+import 'package:food_app/util.dart';
 
 class FoodItem extends StatelessWidget {
   const FoodItem({super.key,
@@ -66,7 +66,7 @@ class FoodItem extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           _iconText("${food.time} min", Icons.timer),
-                          _iconText("${food.level}", Icons.stacked_line_chart),
+                          _iconText(food.level.name.toUpper(), Icons.stacked_line_chart),
                           _iconText("${food.price}K", Icons.attach_money),
                         ],
                       )
